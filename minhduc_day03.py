@@ -6,10 +6,11 @@ print("|Chon A de tinh tong hang hoa ban ra|")
 print("|Chon E de thoat                    |")
 print("+-----------------------------------+")
 
-danhsachhoadon=[]
-# danhsachhoadon = [
-#     {'nguoimua': 'Cuong', 'danhsachhanghoa': [{'soluong': 2, 'ten': 'Coca', 'thanhtien': 20000, 'dongia': 10000, 'stt': '1'}], 'sohoadon': 'MS01', 'ngayhoadon': '1'}
-# ]
+# danhsachhoadon=[]
+danhsachhoadon = [
+    {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS01', 'tongtientruocthue': 25000},
+    {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS02', 'tongtientruocthue': 25000}
+]
 
 while True:
     x=input("=> chon chuc nang:")
@@ -68,7 +69,27 @@ while True:
                     #end of Hoa don se in o day
                     break
     if x.upper() == 'T':
-        pass
+        tongdoanhthu = 0
+        for hoadon in danhsachhoadon:
+            tongdoanhthu = tongdoanhthu + hoadon["tongtien"]
+        print("Tong doanh thu la: ", tongdoanhthu)
 
+    if x.upper() == 'A':
+        tongsohanghoa = 0
+        doanhsoban = 0
+
+        tenhanghoa = input("nhap ten hang hoa can xem:")
+        for hoadon in danhsachhoadon:
+            for hanghoa in hoadon["danhsachhanghoa"]:
+                if hanghoa["ten"] == tenhanghoa:
+                    tongsohanghoa = tongsohanghoa + hanghoa["soluong"]
+                    doanhsoban = doanhsoban + hanghoa["thanhtien"]
+                    break
+        print("Tong so hang hoa: ", tongsohanghoa)
+        print("Doanh so ban: ", doanhsoban)
+    
+    if x.upper() == 'E':
+        print("Tam biet! Hen gap lai")
+        break
         
             
