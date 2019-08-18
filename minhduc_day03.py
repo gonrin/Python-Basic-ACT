@@ -5,70 +5,70 @@ print("|Chon T de tinh tong doanh thu      |")
 print("|Chon A de tinh tong hang hoa ban ra|")
 print("|Chon E de thoat                    |")
 print("+-----------------------------------+")
+
+danhsachhoadon=[]
+# danhsachhoadon = [
+#     {'nguoimua': 'Cuong', 'danhsachhanghoa': [{'soluong': 2, 'ten': 'Coca', 'thanhtien': 20000, 'dongia': 10000, 'stt': '1'}], 'sohoadon': 'MS01', 'ngayhoadon': '1'}
+# ]
+
 while True:
-    danhsachhoahon=[]
     x=input("=> chon chuc nang:")
     print("=> ban da chon chuc nang:",x)
-    if x == 'C':
-        tiep=input("tiep tuc?y/n?")
-        while tiep == 'y':
-            print("moi ban tao hoa don")
-            hoadon={}
-            banghoadon={}
-            stt = input("nhap so thu tu:")
-            stt_x=str(stt)
-            for i in range(len(stt_x),7):
-                stt_x= ' '+stt_x
-            tenhanghoa= input("nhap ten hang hoa muon mua :")
-            for i in range(len(tenhanghoa),16):
-                tenhanghoa = tenhanghoa + ' '
-            so=[]
-            soluong=input("nhap so luong:")
-            soluong_x=str(soluong)
-            for i in range(len(soluong_x),8):
-                soluong_x = ' '+soluong_x
-            so.append(soluong)
-            dongia= input("nhap gia cua san pham:")
-            dongia_x=str(dongia)
-            for i in range(len(dongia_x),13):
-                dongia_x=' '+dongia_x
-            tien=[]
-            thanhtien=int(dongia)*int(soluong)
-            thanhtien_x=str(thanhtien)
-            for i in range(len(thanhtien_x),16):
-                thanhtien_x=' '+thanhtien_x
-            tien.append(thanhtien)
-            hoadon["sohoadon"]=input("nhap so hoa don :")
-            hoadon["ngaysuat"]=input("nhap ngay tao hoa don:")
-            hoadon["tenkhachhang"]=input("nhap ten khach hang:")
-            tiep=input("ban muon tiep tuc ko?y/n?")
-    if x== 'R':
-        print("                          HOA DON MUA HANG                                  ")
-        print("so hoa don:",hoadon["sohoadon"])
-        print("ngay xuat:",hoadon["ngaysuat"])
-        print("ten khach hang:",hoadon["tenkhachhang"])
-        print("_____________________________thong tin hoa don_______________________________")
-        print("+----------+------------------+----------+---------------+------------------+")
-        print("|   STT    |     hang hoa     | so luong |    don gia    |    thanh tien    |")
-        print("+----------+------------------+----------+---------------+------------------+")
-        print("| "+stt_x+"  | " +tenhanghoa+ " | "+soluong_x+" | "+dongia_x+" | "+thanhtien_x+" |")
-        print("+----------+------------------+----------+---------------+------------------+")
-        print("| "+stt_x+"  | " +tenhanghoa+ " | "+soluong_x+" | "+dongia_x+" | "+thanhtien_x+" |")
-        print("+----------+------------------+----------+---------------+------------------+")
-    if x== 'T':
-        print("tong doanh thu bang")
-        t_sum = 0
-        tien=[]
-        for num in tien:
-            t_sum = t_sum + num
-        print(t_sum)
-    if x== 'A':
-        print("so hang hoa ban ra")
-        a_sum = 0
-        so=[]
-        for j in so:
-            a_sum = a_sum + j
-        print(a_sum)
-    if x== 'E':
-        print("^_^ bye ^_^")
-        break
+    if x.upper() == 'C':
+        print("moi ban tao hoa don")
+        hoadon={}
+        hoadon["sohoadon"] = input("nhap so hoa don:")
+        hoadon["ngayhoadon"]= input("nhap ngay hoa don :")
+        hoadon["nguoimua"]= input("nhap nguoi mua hang :")
+        hoadon["tongtientruocthue"] = 0
+        hoadon["thue"] = 0.1
+        hoadon["tongtien"] = 0
+        hoadon["danhsachhanghoa"] = []
+
+        nhaphanghoa = input("=> Ban co muon nhap hang hoa khong (y/n): ")
+        while nhaphanghoa.upper() == 'Y':
+            hanghoa = {}
+            hanghoa["stt"] = input("nhap so thu tu: ")
+            hanghoa["ten"] = input("nhap ten hang hoa: ")
+            soluong = input("nhap so luong: ")
+            hanghoa["soluong"] = int(soluong)
+            hanghoa["dongia"] = int(input("nhap don gia:"))
+            hanghoa["thanhtien"] = hanghoa["soluong"] * hanghoa["dongia"]
+            hoadon["danhsachhanghoa"].append(hanghoa)
+
+            hoadon["tongtientruocthue"] = hoadon["tongtientruocthue"] + hanghoa["thanhtien"]
+
+            nhaphanghoa = input("=> Ban co muon nhap hang hoa khong (y/n): ")
+        
+        hoadon["tongtien"] = hoadon["tongtientruocthue"] + hoadon["tongtientruocthue"]*hoadon["thue"]
+        danhsachhoadon.append(hoadon)
+        print("Kiemtra:", danhsachhoadon)
+
+    if x.upper() == 'R':
+        timthay = False
+        while timthay is False:
+            sohoadon_canxem = input("nhap so hoa don can xem:")
+            for hoadon in danhsachhoadon:
+                if hoadon["sohoadon"] == sohoadon_canxem:
+                    timthay = True
+                    #Hoa don se in o day
+                    print("                          HOA DON MUA HANG                                  ")
+                    print("so hoa don:",hoadon["sohoadon"])
+                    print("ngay xuat:",hoadon["ngayhoadon"])
+                    print("ten khach hang:",hoadon["nguoimua"])
+                    print("_____________________________thong tin hoa don_______________________________")
+                    print("+----------+------------------+----------+---------------+------------------+")
+                    print("|   STT    |     hang hoa     | so luong |    don gia    |    thanh tien    |")
+                    print("+----------+------------------+----------+---------------+------------------+")
+                    
+                    for hanghoa in hoadon["danhsachhanghoa"]:
+                        print("In dong hang hoa o day")
+                        #print("| "+stt_x+"  | " +tenhanghoa+ " | "+soluong_x+" | "+dongia_x+" | "+thanhtien_x+" |")
+                    print("+----------+------------------+----------+---------------+------------------+")
+                    #end of Hoa don se in o day
+                    break
+    if x.upper() == 'T':
+        pass
+
+        
+            
