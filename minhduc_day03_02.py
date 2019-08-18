@@ -6,11 +6,20 @@ print("|Chon A de tinh tong hang hoa ban ra|")
 print("|Chon E de thoat                    |")
 print("+-----------------------------------+")
 
-# danhsachhoadon=[]
-danhsachhoadon = [
-    {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS01', 'tongtientruocthue': 25000},
-    {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS02', 'tongtientruocthue': 25000}
-]
+danhsachhoadon=[]
+# danhsachhoadon = [
+#     {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS01', 'tongtientruocthue': 25000},
+#     {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS02', 'tongtientruocthue': 25000}
+# ]
+
+# hanghoaban = {
+#     # "Coca": {
+#     #     "tongso": 0,
+#     #     "doanhthu": 0
+#     # }
+# }
+
+hanghoaban = {}
 
 while True:
     x=input("=> chon chuc nang:")
@@ -35,6 +44,16 @@ while True:
             hanghoa["soluong"] = int(soluong)
             hanghoa["dongia"] = int(input("nhap don gia:"))
             hanghoa["thanhtien"] = hanghoa["soluong"] * hanghoa["dongia"]
+            
+            if hanghoa["ten"] in hanghoaban:
+                hanghoaban[hanghoa["ten"]]["tongso"] = hanghoaban[hanghoa["ten"]]["tongso"] + hanghoa["soluong"]
+                hanghoaban[hanghoa["ten"]]["doanhthu"] = hanghoaban[hanghoa["ten"]]["doanhthu"] + hanghoa["thanhtien"]
+            else:
+                hanghoaban[hanghoa["ten"]] = {
+                    "tongso": hanghoa["soluong"],
+                    "doanhthu": hanghoa["thanhtien"]
+                }
+
             hoadon["danhsachhanghoa"].append(hanghoa)
 
             hoadon["tongtientruocthue"] = hoadon["tongtientruocthue"] + hanghoa["thanhtien"]
