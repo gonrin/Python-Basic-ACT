@@ -1,4 +1,6 @@
 print("+--------------MENU-----------------+")
+print("|Chon HH de tao hang hoa            |")
+print("|Chon LH de tao loai hang hoa       |")
 print("|Chon C de tao hoa don              |")
 print("|Chon R de xem thong tin hoa don    |")
 print("|Chon T de tinh tong doanh thu      |")
@@ -6,6 +8,8 @@ print("|Chon A de tinh tong hang hoa ban ra|")
 print("|Chon E de thoat                    |")
 print("+-----------------------------------+")
 
+danhsachhanghoa = []
+danhsachloaihanghoa = []
 danhsachhoadon=[]
 # danhsachhoadon = [
 #     {'thue': 0.1, 'tongtien': 27500.0, 'danhsachhanghoa': [{'ten': 'Coca', 'dongia': 5000, 'thanhtien': 10000, 'stt': '1', 'soluong': 2}, {'ten': 'Pepsi', 'dongia': 3000, 'thanhtien': 15000, 'stt': '2', 'soluong': 5}], 'nguoimua': 'Cuong', 'ngayhoadon': '1', 'sohoadon': 'MS01', 'tongtientruocthue': 25000},
@@ -19,11 +23,39 @@ danhsachhoadon=[]
 #     # }
 # }
 
+def tao_loaihanghoa():
+  data = {}
+  data["id"] = input("xin moi nhap id loai hang hoa:")
+  data["ten"] = input("xin moi nhap ten loai hang hoa:")
+  danhsachloaihanghoa.append(data)
+
+
+def xem_loaihanghoa():
+  id = input("xin moi nhap id loai hang hoa:")
+  for loai in danhsachloaihanghoa:
+    if loai["id"] == id:
+      return loai
+
+
+def sua_loaihanghoa(id, data):
+  pass
+
+def xoa_loaihanghoa(id):
+  pass
+
+def danhsach_loaihanghoa():
+  return danhsachloaihanghoa
+
+
 hanghoaban = {}
 
 while True:
     x=input("=> chon chuc nang:")
     print("=> ban da chon chuc nang:",x)
+    if x.upper() == 'TLH':
+      tao_loaihanghoa()
+    if x.upper() == 'XLH':
+      xem_loaihanghoa()
     if x.upper() == 'C':
         print("moi ban tao hoa don")
         hoadon={}
