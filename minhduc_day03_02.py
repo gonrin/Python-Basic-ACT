@@ -47,6 +47,21 @@ def danhsach_loaihanghoa():
   return danhsachloaihanghoa
 
 
+def tao_hanghoa():
+  data = {}
+  data["id"] = input("xin moi nhap id hang hoa:")
+  data["ten"] = input("xin moi nhap ten hang hoa:")
+  data["loaihanghoa_id"] = input("xin moi nhap ma loai hang hoa:")
+  danhsachhanghoa.append(data)
+
+
+def xem_hanghoa():
+  id = input("xin moi nhap id hang hoa:")
+  for hanghoa in danhsachhanghoa:
+    if hanghoa["id"] == id:
+      return hanghoa
+
+
 hanghoaban = {}
 
 while True:
@@ -56,6 +71,10 @@ while True:
       tao_loaihanghoa()
     if x.upper() == 'XLH':
       xem_loaihanghoa()
+    if x.upper() == 'THH':
+      tao_hanghoa()
+    if x.upper() == 'XHH':
+      xem_hanghoa()
     if x.upper() == 'C':
         print("moi ban tao hoa don")
         hoadon={}
