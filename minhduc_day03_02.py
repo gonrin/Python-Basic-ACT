@@ -27,8 +27,18 @@ def load_loaihanghoa_luckhoidong():
   with open('danhmuc/loaihanghoa.csv', 'r') as f:
     line = f.readline()
     while line:
-	print(line)
-	line = f.readline()
+        print(line)
+        line = f.readline()
+        str_to_reads = line.split("#")
+        #print("str_to_reads:", str_to_reads)
+        if len(str_to_reads) > 1:
+            loaihanghoa = {}
+            loaihanghoa["id"] = str_to_reads[0]
+            tenloai = str_to_reads[1]
+            if tenloai.endswith('\n'):
+                tenloai = tenloai[0:len(tenloai)-1]
+            loaihanghoa["ten"] = tenloai
+            danhsachloaihanghoa.append(loaihanghoa)
 
 	
 
