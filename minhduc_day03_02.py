@@ -1,6 +1,6 @@
 print("+--------------MENU-----------------+")
-print("|Chon HH de tao hang hoa            |")
-print("|Chon LH de tao loai hang hoa       |")
+print("|Chon THH de tao hang hoa            |")
+print("|Chon TLH de tao loai hang hoa       |")
 print("|Chon C de tao hoa don              |")
 print("|Chon R de xem thong tin hoa don    |")
 print("|Chon T de tinh tong doanh thu      |")
