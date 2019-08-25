@@ -23,6 +23,16 @@ danhsachhoadon=[]
 #     # }
 # }
 
+def load_loaihanghoa_luckhoidong():
+  with open('danhmuc/loaihanghoa.csv', 'r') as f:
+    line = f.readline()
+    while line:
+	print(line)
+	line = f.readline()
+
+	
+
+	
 def tao_loaihanghoa():
   data = {}
   data["id"] = input("xin moi nhap id loai hang hoa:")
@@ -67,6 +77,9 @@ def xem_hanghoa():
 
 
 hanghoaban = {}
+
+
+load_loaihanghoa_luckhoidong()
 
 while True:
     x=input("=> chon chuc nang:")
