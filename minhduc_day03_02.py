@@ -58,6 +58,7 @@ def xem_loaihanghoa():
   id = input("xin moi nhap id loai hang hoa:")
   for loai in danhsachloaihanghoa:
     if loai["id"] == id:
+      print("loai hang hoa: ", loai)
       return loai
 
 
@@ -83,6 +84,7 @@ def xem_hanghoa():
   id = input("xin moi nhap id hang hoa:")
   for hanghoa in danhsachhanghoa:
     if hanghoa["id"] == id:
+    
       return hanghoa
 
 
