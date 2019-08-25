@@ -28,6 +28,10 @@ def tao_loaihanghoa():
   data["id"] = input("xin moi nhap id loai hang hoa:")
   data["ten"] = input("xin moi nhap ten loai hang hoa:")
   danhsachloaihanghoa.append(data)
+  str_to_save = data["id"] + "#" + data["ten"]
+  with open('danhmuc/loaihanghoa.csv', 'a') as f:
+	    data = f.write(str_to_save)
+
 
 
 def xem_loaihanghoa():
