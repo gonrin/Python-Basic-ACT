@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Quản lý bán hàng</title>
+    </head>
+    <body>
+        <h1>Danh sách loại hàng hoá</h1>
+        <a href="/loaihanghoa/create"><button>Tạo mới</button></a>
+        <table>
+            <tr>
+                <!--<th><a href="/loaihanghoa/list"><button>Quay lại</button></a></th>-->
+                <th>ID</th>
+                <th>Tên</th>
+            </tr>
+            {% for item in list_item %}
+            <tr>
+                <td><a href="/loaihanghoa/read?id={{ item.id }}">{{ item.id }}</a></td>
+                <td><a href="/loaihanghoa/read?id={{ item.id }}">{{ item.ten }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+</html>

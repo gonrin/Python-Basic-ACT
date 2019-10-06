@@ -3,10 +3,15 @@
         <title>Quản lý bán hàng</title>
     </head>
     <body>
+        <h1>Chi tiết loại hàng hoá</h1>
+        <a href="/loaihanghoa/list"><button>Quay lại</button></a>
+        <a href="/loaihanghoa/update?id={{id}}"><button>Sửa</button></a>
+        <a href="/loaihanghoa/delete?id={{id}}"><button>Xoá</button></a>
         <table>
-            <tr>
-                <th colspan=2><h1>Chi tiết loại hàng hoá</h1></th>
-            </tr>
+            <!--<tr>
+                <th><a href="/loaihanghoa/list"><button>Quay lại</button></a></th>
+                <th></th>
+            </tr>-->
             <tr>
                 <td><span>ID:</span></td>
                 <td><span>{{ id }}</span></td>

@@ -1,7 +1,6 @@
-from flask import request, render_template
-
 # flask run --host=0.0.0.0
-from flask import Flask
+from flask import Flask, request, render_template
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,9 +10,14 @@ def hello_world():
 
 ########### Loai hang hoa #############
 
-@app.route('/loaihanghoa')
+@app.route('/loaihanghoa/list')
 def loaihanghoa_list():
-    return 'List loai hang hoa'
+    
+    objs = [
+        {"id": "DA", "ten": "Đồ ăn"},
+        {"id": "DU", "ten": "Đồ uống"},
+    ]
+    return render_template('loaihanghoa/list.html', list_item=objs)
 
 @app.route('/loaihanghoa/create')
 def loaihanghoa_create():
@@ -25,7 +29,7 @@ def loaihanghoa_read():
 
     ### get thong tin loai hang hoa tu file
 
-    obj = {"id": 13, "ten": "Coca", "ghichu": "Ghi chu Coca cola"}
+    obj = {"id": id, "ten": "Coca", "ghichu": "Ghi chu Coca cola"}
     print(request.args)
     return render_template('loaihanghoa/read.html', id=obj.get("id"), ten=obj.get("ten"),\
         ghichu=obj.get("ghichu"))
