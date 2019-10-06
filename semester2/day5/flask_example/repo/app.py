@@ -1,5 +1,5 @@
 # flask run --host=0.0.0.0
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 
 app = Flask(__name__)
 
@@ -19,9 +19,17 @@ def loaihanghoa_list():
     ]
     return render_template('loaihanghoa/list.html', list_item=objs)
 
-@app.route('/loaihanghoa/create')
+@app.route('/loaihanghoa/create', methods=['POST', 'GET'])
 def loaihanghoa_create():
-    return 'Create loai hang hoa'
+    if request.method == 'GET':
+        return render_template('loaihanghoa/create.html')
+    if request.method == 'POST':
+        #nhan request data
+        id = request.form['id']
+        ten = request.form['ten']
+        #save vao datas tore
+        #chuyen nguoi dung vao trang danh sach
+        return redirect("/loaihanghoa/list")
 
 @app.route('/loaihanghoa/read')
 def loaihanghoa_read():
