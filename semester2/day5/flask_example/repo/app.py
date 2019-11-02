@@ -30,6 +30,7 @@ def loaihanghoa_create():
         #save vao datas tore
         #chuyen nguoi dung vao trang danh sach
         return redirect("/loaihanghoa/list")
+    return 'Create loai hang hoa'
 
 @app.route('/loaihanghoa/read')
 def loaihanghoa_read():
@@ -44,6 +45,17 @@ def loaihanghoa_read():
 
 @app.route('/loaihanghoa/update')
 def loaihanghoa_update():
+    if request.method == 'GET':
+        id = request.args.get('id', '')
+        obj = {"id": id, "ten": "Coca", "ghichu": "Ghi chu Coca cola"}
+        return render_template('loaihanghoa/update.html', item=obj)
+    if request.method == 'POST':
+        #nhan request data
+        id = request.form['id']
+        ten = request.form['ten']
+        #save vao datas tore
+        #chuyen nguoi dung vao trang danh sach
+        return redirect("/loaihanghoa/list")
     return 'Update loai hang hoa'
 
 @app.route('/loaihanghoa/delete')
