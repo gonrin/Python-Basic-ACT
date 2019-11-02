@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Riddle - Portfolio Template</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Riddle - Portfolio Template">
+	<meta name="keywords" content="portfolio, riddle, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- header section start -->
+	<header class="header-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="logo">
+						<h2 class="site-logo">Riddle</h2>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<a href="" class="site-btn header-btn">Get in touch</a>
+					<nav class="main-menu">
+						<ul>
+							<li><a href="home.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="home-2.html">Work</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header section end -->
+
+	<!-- page section start -->
+	<section class="page-section pt100">
+		<div class="container">
+			<div class="element">
+				<div class="text-center">
+					<div class="section-title mb-5">Buttons</div>
+					<div class="buttons">
+						<button class="site-btn sb-dark mr-4 mb-2">Send</button>
+						<button class="site-btn btn-fade mr-4 mb-2">Send</button>
+						<button class="site-btn btn-line mr-4 mb-2">Send</button>
+						<button class="site-btn btn-line-fade mb-2">Send</button>
+					</div>
+				</div>
+			</div>
+			<div class="element">
+				<div class="text-center">
+					<div class="section-title mb-5">Accordions & Tabs</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div id="accordion" class="accordion-area">
+							<div class="panel">
+								<div class="panel-header" id="headingOne">
+									Mauris pharetra libero turpis, congue ultrices turpis consectetur 
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1"></button>
+								</div>
+								<div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+									<div class="panel-body">
+										<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellen te sque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris m alesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. </p>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header" id="headingTwo">
+									Etiam ut augue et felis cursus bibendum sit amet ac justo
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2"></button>
+								</div>
+								<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+									<div class="panel-body">
+										<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellen te sque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris m alesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. </p>
+									</div>
+								</div>
+							</div>
+							<div class="panel">
+								<div class="panel-header active" id="headingThree">
+									Etiam ut augue et felis cursus bibendum sit amet ac justo
+									<button class="panel-link" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3"></button>
+								</div>
+								<div id="collapse3" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+									<div class="panel-body">
+										<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellen te sque sed accumsan risus, id aliquam nulla. Integer lorem risus, feugiat at mauris m alesuada, accumsan pellentesque ipsum. Nunc dapibus, libero ut pulvinar accumsan, tortor nisl iaculis ligula. </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="tab-element">
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="1-tab" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Why choose me?</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Best reasons</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false">Faq</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<!-- single tab content -->
+								<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. Vestibulum sollicitudin leo non purus vestibulum placerat. Curabitur ac erat sollicitudin, blandit quam vitae, rutrum diam. Aenean non gravida velit, eu consectetur neque.</p>
+								</div>
+								<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. Vestibulum sollicitudin leo non purus vestibulum placerat. Curabitur ac erat sollicitudin, blandit quam vitae, rutrum diam. Aenean non gravida velit, eu consectetur neque.</p>
+								</div>
+								<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. Vestibulum sollicitudin leo non purus vestibulum placerat. Curabitur ac erat sollicitudin, blandit quam vitae, rutrum diam. Aenean non gravida velit, eu consectetur neque.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="element">
+				<div class="text-center">
+					<div class="section-title mb-5">Milestones</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>56<span>Clients</span></h2>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>112<span>Projects</span></h2>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>25<span>Collabs</span></h2>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>18<span>Coffes</span></h2>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>9k<span>Followers</span></h2>
+						</div>
+					</div>
+					<div class="col-lg-2">
+						<div class="milestone">
+							<h2>10<span>Countries</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="element">
+				<div class="text-center">
+					<div class="section-title mb-5">Loaders</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+						<div class="circle-progress">
+							<div id="progress1"></div>
+							<div class="progress-info">
+								<h2>75%</h2>
+								<p>Fashion</p>
+							</div>		
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+						<div class="circle-progress">
+							<div id="progress2"></div>
+							<div class="progress-info">
+								<h2>83%</h2>
+								<p>Portraits</p>
+							</div>		
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+						<div class="circle-progress">
+							<div id="progress3"></div>
+							<div class="progress-info">
+								<h2>25%</h2>
+								<p>Studio</p>
+							</div>		
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="circle-progress">
+							<div id="progress4"></div>
+							<div class="progress-info">
+								<h2>95%</h2>
+								<p>Weddings</p>
+							</div>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="element">
+				<div class="text-center">
+					<div class="section-title mb-5">Icon Boxes</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="icon-box mb-5 mb-md-0">
+							<div class="icon">
+								<h2>01.</h2>
+							</div>
+							<div class="icon-box-content">
+								<h3>Brainstorming</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-box mb-5 mb-md-0">
+							<div class="icon">
+								<h2>02.</h2>
+							</div>
+							<div class="icon-box-content">
+								<h3>Work in Progress</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="icon-box ">
+							<div class="icon">
+								<h2>03.</h2>
+							</div>
+							<div class="icon-box-content">
+								<h3>Amazing Results</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet pharetra nisl. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- page section end -->
+
+	<!-- footer section start -->
+	<footer class="footer-section text-center">
+		<div class="container">
+			<div class="social-links">
+				<a href=""><span class="fa fa-pinterest"></span></a>
+				<a href=""><span class="fa fa-linkedin"></span></a>
+				<a href=""><span class="fa fa-instagram"></span></a>
+				<a href=""><span class="fa fa-facebook"></span></a>
+				<a href=""><span class="fa fa-twitter"></span></a>
+			</div>
+			<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+		</div>
+	</footer>
+	<!-- footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
