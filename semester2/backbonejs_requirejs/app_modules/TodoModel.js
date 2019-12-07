@@ -9,7 +9,8 @@ define(function (require) {
         defaults: function() {
           return {
             title: "empty todo...",
-            order: Todos.nextOrder(),
+            //order: Todos.nextOrder(),
+            order: 1,
             done: false
           };
         },
