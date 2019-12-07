@@ -47,7 +47,7 @@ require(['jquery','underscore', 'app/TodoCollection', 'app/TodoView'], function 
     
           this.input = this.$("#new-todo");
           this.allCheckbox = this.$("#toggle-all")[0];
-          console.log("allCheckbox");
+          
           this.listenTo(Todos, 'add', this.addOne);
           this.listenTo(Todos, 'reset', this.addAll);
           this.listenTo(Todos, 'all', this.render);
