@@ -22,8 +22,10 @@ require.config({
     },
 });
 
-require(['jquery','underscore'], function ($, _){
+require(['jquery','underscore', 'app/TodoCollection'], function ($, _, TodoList){
     console.log("Hello");
+
+    var Todos = new TodoList;
 
 });
 
