@@ -2,10 +2,6 @@ define('jquery', [], function () {
     return jQuery;
 });
 
-// define('underscore', [], function () {
-//     return _;
-// });
-
 require.config({
     baseUrl: '/lib',
     paths: {
@@ -119,11 +115,3 @@ require(['jquery','underscore', 'app/TodoCollection', 'app/TodoView'], function 
       var App = new AppView;
 
 });
-
-// define(function (require) {
-//     var myteam = require("./team");
-//     var mylogger = require("./player");
-//     console.log(myteam);
-//     alert("Player Name : " + myteam.player);
-//     mylogger.myfunc();
-//  });
