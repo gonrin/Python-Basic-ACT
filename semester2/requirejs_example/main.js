@@ -1,15 +1,9 @@
-define(["./mnc", "./startup"], 
-   function(mnc, startup) {
-        
-      return {
-         state: "karnataka",
-         city: "bangalore",
-      
-         addCompany: function() {
-            mnc.decrement(this);
-            startup.add(this);
-         }
-      
-      }
-   }
-);
+define(function (require) {
+    var myteam = require("./team");
+    var mylogger = require("./player");
+    console.log(myteam);
+    alert("Player Name : " + myteam.player);
+    mylogger.myfunc();
+ });
+
+ 
